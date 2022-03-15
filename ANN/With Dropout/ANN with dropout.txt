@@ -1,0 +1,278 @@
+Execution of ANN training with drop out and with relu
+
+Epoch 1/50
+687/687 [==============================] - 11s 15ms/step - loss: 2.1051 - sparse_categorical_accuracy: 0.3243 - val_loss: 1.3289 - val_sparse_categorical_accuracy: 0.5653
+Epoch 2/50
+687/687 [==============================] - 10s 14ms/step - loss: 1.2648 - sparse_categorical_accuracy: 0.5642 - val_loss: 0.7573 - val_sparse_categorical_accuracy: 0.7594
+Epoch 3/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.9272 - sparse_categorical_accuracy: 0.6804 - val_loss: 0.6695 - val_sparse_categorical_accuracy: 0.7733
+Epoch 4/50
+687/687 [==============================] - 9s 14ms/step - loss: 0.7194 - sparse_categorical_accuracy: 0.7496 - val_loss: 0.3675 - val_sparse_categorical_accuracy: 0.8927
+Epoch 5/50
+687/687 [==============================] - 9s 14ms/step - loss: 0.6020 - sparse_categorical_accuracy: 0.7865 - val_loss: 0.2726 - val_sparse_categorical_accuracy: 0.9211
+Epoch 6/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.4856 - sparse_categorical_accuracy: 0.8315 - val_loss: 0.2183 - val_sparse_categorical_accuracy: 0.9370
+Epoch 7/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.4201 - sparse_categorical_accuracy: 0.8530 - val_loss: 0.1823 - val_sparse_categorical_accuracy: 0.9457
+Epoch 8/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.4120 - sparse_categorical_accuracy: 0.8565 - val_loss: 0.1312 - val_sparse_categorical_accuracy: 0.9630
+Epoch 9/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.3542 - sparse_categorical_accuracy: 0.8765 - val_loss: 0.2156 - val_sparse_categorical_accuracy: 0.9253
+Epoch 10/50
+687/687 [==============================] - 9s 14ms/step - loss: 0.3423 - sparse_categorical_accuracy: 0.8788 - val_loss: 0.1009 - val_sparse_categorical_accuracy: 0.9796
+Epoch 11/50
+687/687 [==============================] - 9s 14ms/step - loss: 0.2966 - sparse_categorical_accuracy: 0.8975 - val_loss: 0.0971 - val_sparse_categorical_accuracy: 0.9732
+Epoch 12/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.3010 - sparse_categorical_accuracy: 0.8971 - val_loss: 0.1271 - val_sparse_categorical_accuracy: 0.9676
+Epoch 13/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.2558 - sparse_categorical_accuracy: 0.9113 - val_loss: 0.0449 - val_sparse_categorical_accuracy: 0.9913
+Epoch 14/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.2501 - sparse_categorical_accuracy: 0.9139 - val_loss: 0.0645 - val_sparse_categorical_accuracy: 0.9876
+Epoch 15/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.2669 - sparse_categorical_accuracy: 0.9062 - val_loss: 0.0527 - val_sparse_categorical_accuracy: 0.9871
+Epoch 16/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.2357 - sparse_categorical_accuracy: 0.9204 - val_loss: 0.0670 - val_sparse_categorical_accuracy: 0.9836
+Epoch 17/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.2364 - sparse_categorical_accuracy: 0.9190 - val_loss: 0.1040 - val_sparse_categorical_accuracy: 0.9683
+Epoch 18/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.2741 - sparse_categorical_accuracy: 0.9073 - val_loss: 0.0879 - val_sparse_categorical_accuracy: 0.9761
+Epoch 19/50
+687/687 [==============================] - 9s 14ms/step - loss: 0.2373 - sparse_categorical_accuracy: 0.9185 - val_loss: 0.0675 - val_sparse_categorical_accuracy: 0.9787
+Model: "ANN_with_dropout_and_with_relu"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ Hidden_Layer_1 (Dense)      (None, 1024)              803840    
+                                                                 
+ Dropout_Layer_1 (Dropout)   (None, 1024)              0         
+                                                                 
+ Hidden_Layer_2 (Dense)      (None, 512)               524800    
+                                                                 
+ Dropout_Layer_2 (Dropout)   (None, 512)               0         
+                                                                 
+ Output_Layer (Dense)        (None, 24)                12312     
+                                                                 
+=================================================================
+Total params: 1,340,952
+Trainable params: 1,340,952
+Non-trainable params: 0
+_________________________________________________________________
+End of training model with activation function =  relu
+--------------------------------------------------------------------------------------
+
+              precision    recall  f1-score   support
+
+           0       0.86      1.00      0.92       331
+           1       0.96      0.98      0.97       432
+           2       0.92      1.00      0.96       310
+           3       0.84      0.94      0.88       245
+           4       0.89      1.00      0.94       498
+           5       0.92      0.95      0.93       247
+           6       0.86      0.81      0.83       348
+           7       0.96      0.95      0.95       436
+           8       0.82      0.78      0.80       288
+           9       0.86      0.61      0.71       331
+          10       0.66      0.75      0.70       209
+          11       0.69      0.80      0.74       394
+          12       0.73      0.44      0.55       291
+          13       0.95      0.92      0.94       246
+          14       0.91      1.00      0.95       347
+          15       0.64      1.00      0.78       164
+          16       0.40      0.42      0.41       144
+          17       0.68      0.66      0.67       246
+          18       0.65      0.74      0.69       248
+          19       0.63      0.55      0.59       266
+          20       0.76      0.47      0.58       346
+          21       0.53      0.86      0.65       206
+          22       0.80      0.75      0.77       267
+          23       0.84      0.52      0.64       332
+
+    accuracy                           0.80      7172
+   macro avg       0.78      0.79      0.77      7172
+weighted avg       0.81      0.80      0.80      7172
+
+Execution of ANN training with drop out and with PReLU
+
+Epoch 1/50
+687/687 [==============================] - 11s 14ms/step - loss: 2.0118 - sparse_categorical_accuracy: 0.3559 - val_loss: 1.1725 - val_sparse_categorical_accuracy: 0.6321
+Epoch 2/50
+687/687 [==============================] - 11s 15ms/step - loss: 1.0110 - sparse_categorical_accuracy: 0.6553 - val_loss: 0.8512 - val_sparse_categorical_accuracy: 0.6933
+Epoch 3/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.6105 - sparse_categorical_accuracy: 0.7872 - val_loss: 0.2940 - val_sparse_categorical_accuracy: 0.9140
+Epoch 4/50
+687/687 [==============================] - 11s 15ms/step - loss: 0.4325 - sparse_categorical_accuracy: 0.8466 - val_loss: 0.2514 - val_sparse_categorical_accuracy: 0.9151
+Epoch 5/50
+687/687 [==============================] - 11s 16ms/step - loss: 0.3111 - sparse_categorical_accuracy: 0.8907 - val_loss: 0.1746 - val_sparse_categorical_accuracy: 0.9381
+Epoch 6/50
+687/687 [==============================] - 11s 16ms/step - loss: 0.2460 - sparse_categorical_accuracy: 0.9112 - val_loss: 0.1210 - val_sparse_categorical_accuracy: 0.9645
+Epoch 7/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.2151 - sparse_categorical_accuracy: 0.9261 - val_loss: 0.0440 - val_sparse_categorical_accuracy: 0.9902
+Epoch 8/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.1899 - sparse_categorical_accuracy: 0.9349 - val_loss: 0.0483 - val_sparse_categorical_accuracy: 0.9922
+Epoch 9/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.1785 - sparse_categorical_accuracy: 0.9382 - val_loss: 0.0375 - val_sparse_categorical_accuracy: 0.9911
+Epoch 10/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.1766 - sparse_categorical_accuracy: 0.9386 - val_loss: 0.0831 - val_sparse_categorical_accuracy: 0.9683
+Epoch 11/50
+687/687 [==============================] - 11s 16ms/step - loss: 0.1718 - sparse_categorical_accuracy: 0.9412 - val_loss: 0.1068 - val_sparse_categorical_accuracy: 0.9669
+Epoch 12/50
+687/687 [==============================] - 11s 16ms/step - loss: 0.1553 - sparse_categorical_accuracy: 0.9482 - val_loss: 0.0181 - val_sparse_categorical_accuracy: 0.9954
+Epoch 13/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.1524 - sparse_categorical_accuracy: 0.9512 - val_loss: 0.0685 - val_sparse_categorical_accuracy: 0.9745
+Epoch 14/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.1224 - sparse_categorical_accuracy: 0.9589 - val_loss: 0.0194 - val_sparse_categorical_accuracy: 0.9949
+Epoch 15/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.1390 - sparse_categorical_accuracy: 0.9572 - val_loss: 0.0339 - val_sparse_categorical_accuracy: 0.9883
+Epoch 16/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.1536 - sparse_categorical_accuracy: 0.9512 - val_loss: 0.0143 - val_sparse_categorical_accuracy: 0.9962
+Epoch 17/50
+687/687 [==============================] - 11s 15ms/step - loss: 0.1255 - sparse_categorical_accuracy: 0.9602 - val_loss: 0.0584 - val_sparse_categorical_accuracy: 0.9801
+Model: "ANN_with_dropout_and_with_PReLU"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ Hidden_Layer_1 (Dense)      (None, 1024)              804864    
+                                                                 
+ Dropout_Layer_1 (Dropout)   (None, 1024)              0         
+                                                                 
+ Hidden_Layer_2 (Dense)      (None, 512)               525312    
+                                                                 
+ Dropout_Layer_2 (Dropout)   (None, 512)               0         
+                                                                 
+ Output_Layer (Dense)        (None, 24)                12312     
+                                                                 
+=================================================================
+Total params: 1,342,488
+Trainable params: 1,342,488
+Non-trainable params: 0
+_________________________________________________________________
+End of training model with activation function =  PReLU
+--------------------------------------------------------------------------------------
+
+              precision    recall  f1-score   support
+
+           0       0.89      1.00      0.94       331
+           1       0.94      1.00      0.97       432
+           2       0.98      1.00      0.99       310
+           3       0.99      0.78      0.87       245
+           4       0.81      1.00      0.89       498
+           5       0.79      1.00      0.88       247
+           6       0.93      0.84      0.88       348
+           7       1.00      0.90      0.95       436
+           8       0.69      0.85      0.76       288
+           9       0.97      0.39      0.56       331
+          10       0.73      1.00      0.84       209
+          11       0.88      0.75      0.81       394
+          12       0.86      0.44      0.58       291
+          13       0.85      0.84      0.85       246
+          14       1.00      0.98      0.99       347
+          15       0.79      0.87      0.83       164
+          16       0.71      0.71      0.71       144
+          17       0.66      0.75      0.70       246
+          18       0.59      0.66      0.62       248
+          19       0.82      0.74      0.78       266
+          20       0.69      0.72      0.70       346
+          21       0.45      0.70      0.55       206
+          22       0.77      0.79      0.78       267
+          23       0.72      0.61      0.66       332
+
+    accuracy                           0.81      7172
+   macro avg       0.81      0.80      0.80      7172
+weighted avg       0.83      0.81      0.81      7172
+
+Execution of ANN training with drop out and with sigmoid
+
+Epoch 1/50
+687/687 [==============================] - 10s 14ms/step - loss: 2.1291 - sparse_categorical_accuracy: 0.3269 - val_loss: 1.2657 - val_sparse_categorical_accuracy: 0.6041
+Epoch 2/50
+687/687 [==============================] - 9s 14ms/step - loss: 1.1334 - sparse_categorical_accuracy: 0.6222 - val_loss: 0.8160 - val_sparse_categorical_accuracy: 0.7279
+Epoch 3/50
+687/687 [==============================] - 9s 14ms/step - loss: 0.7407 - sparse_categorical_accuracy: 0.7545 - val_loss: 0.6199 - val_sparse_categorical_accuracy: 0.7929
+Epoch 4/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.5189 - sparse_categorical_accuracy: 0.8278 - val_loss: 0.3326 - val_sparse_categorical_accuracy: 0.8973
+Epoch 5/50
+687/687 [==============================] - 9s 14ms/step - loss: 0.3581 - sparse_categorical_accuracy: 0.8839 - val_loss: 0.2660 - val_sparse_categorical_accuracy: 0.9179
+Epoch 6/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.2625 - sparse_categorical_accuracy: 0.9170 - val_loss: 0.2672 - val_sparse_categorical_accuracy: 0.9177
+Epoch 7/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.2166 - sparse_categorical_accuracy: 0.9326 - val_loss: 0.0894 - val_sparse_categorical_accuracy: 0.9791
+Epoch 8/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.1423 - sparse_categorical_accuracy: 0.9565 - val_loss: 0.0992 - val_sparse_categorical_accuracy: 0.9705
+Epoch 9/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.1328 - sparse_categorical_accuracy: 0.9581 - val_loss: 0.1715 - val_sparse_categorical_accuracy: 0.9465
+Epoch 10/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.1189 - sparse_categorical_accuracy: 0.9650 - val_loss: 0.0344 - val_sparse_categorical_accuracy: 0.9949
+Epoch 11/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.0904 - sparse_categorical_accuracy: 0.9738 - val_loss: 0.0575 - val_sparse_categorical_accuracy: 0.9838
+Epoch 12/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.0872 - sparse_categorical_accuracy: 0.9738 - val_loss: 0.0421 - val_sparse_categorical_accuracy: 0.9885
+Epoch 13/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.0719 - sparse_categorical_accuracy: 0.9785 - val_loss: 0.0818 - val_sparse_categorical_accuracy: 0.9669
+Epoch 14/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.0813 - sparse_categorical_accuracy: 0.9758 - val_loss: 0.1021 - val_sparse_categorical_accuracy: 0.9619
+Epoch 15/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.0929 - sparse_categorical_accuracy: 0.9701 - val_loss: 0.0548 - val_sparse_categorical_accuracy: 0.9845
+Epoch 16/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.0570 - sparse_categorical_accuracy: 0.9829 - val_loss: 0.0852 - val_sparse_categorical_accuracy: 0.9736
+Epoch 17/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.0710 - sparse_categorical_accuracy: 0.9773 - val_loss: 0.0202 - val_sparse_categorical_accuracy: 0.9964
+Epoch 18/50
+687/687 [==============================] - 10s 15ms/step - loss: 0.0598 - sparse_categorical_accuracy: 0.9819 - val_loss: 0.0135 - val_sparse_categorical_accuracy: 0.9976
+Epoch 19/50
+687/687 [==============================] - 10s 14ms/step - loss: 0.0853 - sparse_categorical_accuracy: 0.9734 - val_loss: 0.0227 - val_sparse_categorical_accuracy: 0.9958
+Model: "ANN_with_dropout_and_with_sigmoid"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ Hidden_Layer_1 (Dense)      (None, 1024)              803840    
+                                                                 
+ Dropout_Layer_1 (Dropout)   (None, 1024)              0         
+                                                                 
+ Hidden_Layer_2 (Dense)      (None, 512)               524800    
+                                                                 
+ Dropout_Layer_2 (Dropout)   (None, 512)               0         
+                                                                 
+ Output_Layer (Dense)        (None, 24)                12312     
+                                                                 
+=================================================================
+Total params: 1,340,952
+Trainable params: 1,340,952
+Non-trainable params: 0
+_________________________________________________________________
+End of training model with activation function =  sigmoid
+--------------------------------------------------------------------------------------
+
+              precision    recall  f1-score   support
+
+           0       0.81      1.00      0.90       331
+           1       0.96      0.99      0.97       432
+           2       0.96      0.93      0.95       310
+           3       0.81      1.00      0.89       245
+           4       0.96      0.95      0.95       498
+           5       0.80      0.99      0.88       247
+           6       0.93      0.77      0.84       348
+           7       0.95      0.91      0.93       436
+           8       0.83      0.91      0.87       288
+           9       0.94      0.69      0.79       331
+          10       0.98      0.96      0.97       209
+          11       0.88      0.80      0.84       394
+          12       0.88      0.66      0.75       291
+          13       0.99      0.75      0.85       246
+          14       0.96      0.97      0.96       347
+          15       0.55      0.95      0.69       164
+          16       0.71      0.28      0.40       144
+          17       0.55      0.64      0.59       246
+          18       0.69      0.76      0.72       248
+          19       0.59      0.63      0.61       266
+          20       0.67      0.65      0.66       346
+          21       0.53      0.69      0.60       206
+          22       0.73      0.61      0.66       267
+          23       0.82      0.81      0.82       332
+
+    accuracy                           0.82      7172
+   macro avg       0.81      0.80      0.80      7172
+weighted avg       0.83      0.82      0.82      7172
+
+Train time(secs) with dropout relu 	185.1030809879303
+Train time(secs) with dropout PReLU 	179.4084279537201
+Train time(secs) with dropout sigmoid 	188.11008310317993

@@ -1,0 +1,305 @@
+Execution of CNN training without drop out and with relu
+
+Model: "CNN_without_dropout_and_with_relu"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ first_filters (Conv2D)      (None, 26, 26, 3)         30        
+                                                                 
+ batch_normalization_16 (Bat  (None, 26, 26, 3)        12        
+ chNormalization)                                                
+                                                                 
+ MaxPool1 (MaxPooling2D)     (None, 13, 13, 3)         0         
+                                                                 
+ second_filters (Conv2D)     (None, 11, 11, 3)         84        
+                                                                 
+ batch_normalization_17 (Bat  (None, 11, 11, 3)        12        
+ chNormalization)                                                
+                                                                 
+ MaxPool2 (MaxPooling2D)     (None, 5, 5, 3)           0         
+                                                                 
+ Flatten_of_Convs_Output (Fl  (None, 75)               0         
+ atten)                                                          
+                                                                 
+ Hidden_Layer_1 (Dense)      (None, 1024)              77824     
+                                                                 
+ Hidden_Layer_2 (Dense)      (None, 512)               524800    
+                                                                 
+ Output_Layer (Dense)        (None, 24)                12312     
+                                                                 
+=================================================================
+Total params: 615,074
+Trainable params: 615,062
+Non-trainable params: 12
+_________________________________________________________________
+Epoch 1/50
+687/687 [==============================] - 13s 18ms/step - loss: 0.3636 - sparse_categorical_accuracy: 0.8964 - val_loss: 0.0176 - val_sparse_categorical_accuracy: 0.9980
+Epoch 2/50
+687/687 [==============================] - 13s 18ms/step - loss: 0.0359 - sparse_categorical_accuracy: 0.9908 - val_loss: 0.0593 - val_sparse_categorical_accuracy: 0.9834
+Epoch 3/50
+687/687 [==============================] - 12s 18ms/step - loss: 0.0086 - sparse_categorical_accuracy: 0.9982 - val_loss: 7.9113e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 4/50
+687/687 [==============================] - 12s 18ms/step - loss: 4.3893e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 4.7754e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 5/50
+687/687 [==============================] - 13s 18ms/step - loss: 2.1145e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 2.7356e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 6/50
+687/687 [==============================] - 12s 18ms/step - loss: 0.0696 - sparse_categorical_accuracy: 0.9824 - val_loss: 0.1188 - val_sparse_categorical_accuracy: 0.9627
+Epoch 7/50
+687/687 [==============================] - 13s 18ms/step - loss: 0.0086 - sparse_categorical_accuracy: 0.9980 - val_loss: 6.5363e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 8/50
+687/687 [==============================] - 12s 18ms/step - loss: 2.4231e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 3.0419e-04 - val_sparse_categorical_accuracy: 1.0000
+End of training model with activation function =  relu
+--------------------------------------------------------------------------------------
+
+              precision    recall  f1-score   support
+
+           0       0.90      1.00      0.95       331
+           1       1.00      0.91      0.95       432
+           2       0.96      0.93      0.95       310
+           3       0.94      0.76      0.84       245
+           4       0.88      0.93      0.90       498
+           5       0.92      1.00      0.96       247
+           6       0.80      0.94      0.86       348
+           7       0.95      0.90      0.92       436
+           8       0.85      0.78      0.81       288
+           9       0.60      0.62      0.61       331
+          10       0.79      1.00      0.88       209
+          11       0.94      0.86      0.90       394
+          12       0.75      0.75      0.75       291
+          13       1.00      0.65      0.79       246
+          14       0.89      0.92      0.90       347
+          15       0.82      0.95      0.88       164
+          16       0.39      0.53      0.45       144
+          17       0.74      0.57      0.65       246
+          18       0.80      0.56      0.66       248
+          19       0.65      0.89      0.76       266
+          20       0.88      0.79      0.84       346
+          21       0.75      0.89      0.81       206
+          22       0.81      0.88      0.84       267
+          23       0.77      0.70      0.73       332
+
+    accuracy                           0.83      7172
+   macro avg       0.82      0.82      0.82      7172
+weighted avg       0.84      0.83      0.83      7172
+
+Execution of CNN training without drop out and with PReLU
+
+Model: "CNN_without_dropout_and_with_PReLU"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ first_filters (Conv2D)      (None, 26, 26, 3)         30        
+                                                                 
+ batch_normalization_18 (Bat  (None, 26, 26, 3)        12        
+ chNormalization)                                                
+                                                                 
+ MaxPool1 (MaxPooling2D)     (None, 13, 13, 3)         0         
+                                                                 
+ second_filters (Conv2D)     (None, 11, 11, 3)         84        
+                                                                 
+ batch_normalization_19 (Bat  (None, 11, 11, 3)        12        
+ chNormalization)                                                
+                                                                 
+ MaxPool2 (MaxPooling2D)     (None, 5, 5, 3)           0         
+                                                                 
+ Flatten_of_Convs_Output (Fl  (None, 75)               0         
+ atten)                                                          
+                                                                 
+ Hidden_Layer_1 (Dense)      (None, 1024)              78848     
+                                                                 
+ Hidden_Layer_2 (Dense)      (None, 512)               525312    
+                                                                 
+ Output_Layer (Dense)        (None, 24)                12312     
+                                                                 
+=================================================================
+Total params: 616,610
+Trainable params: 616,598
+Non-trainable params: 12
+_________________________________________________________________
+Epoch 1/50
+687/687 [==============================] - 14s 19ms/step - loss: 0.4745 - sparse_categorical_accuracy: 0.8595 - val_loss: 0.0319 - val_sparse_categorical_accuracy: 0.9925
+Epoch 2/50
+687/687 [==============================] - 13s 19ms/step - loss: 0.0210 - sparse_categorical_accuracy: 0.9954 - val_loss: 0.0021 - val_sparse_categorical_accuracy: 1.0000
+Epoch 3/50
+687/687 [==============================] - 14s 20ms/step - loss: 0.0010 - sparse_categorical_accuracy: 1.0000 - val_loss: 5.9735e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 4/50
+687/687 [==============================] - 13s 19ms/step - loss: 3.5977e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 3.0338e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 5/50
+687/687 [==============================] - 13s 20ms/step - loss: 1.9836e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 1.7889e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 6/50
+687/687 [==============================] - 18s 26ms/step - loss: 1.2004e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 1.2363e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 7/50
+687/687 [==============================] - 14s 20ms/step - loss: 7.1894e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 7.7699e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 8/50
+687/687 [==============================] - 13s 19ms/step - loss: 4.7827e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 5.6781e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 9/50
+687/687 [==============================] - 13s 19ms/step - loss: 3.0106e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 3.3737e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 10/50
+687/687 [==============================] - 13s 19ms/step - loss: 1.9782e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 3.0423e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 11/50
+687/687 [==============================] - 13s 19ms/step - loss: 1.2842e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 1.5482e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 12/50
+687/687 [==============================] - 14s 20ms/step - loss: 8.3873e-06 - sparse_categorical_accuracy: 1.0000 - val_loss: 1.2185e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 13/50
+687/687 [==============================] - 13s 19ms/step - loss: 5.8130e-06 - sparse_categorical_accuracy: 1.0000 - val_loss: 9.6766e-06 - val_sparse_categorical_accuracy: 1.0000
+Epoch 14/50
+687/687 [==============================] - 13s 19ms/step - loss: 4.0490e-06 - sparse_categorical_accuracy: 1.0000 - val_loss: 6.4517e-06 - val_sparse_categorical_accuracy: 1.0000
+Epoch 15/50
+687/687 [==============================] - 13s 19ms/step - loss: 0.1156 - sparse_categorical_accuracy: 0.9768 - val_loss: 0.0045 - val_sparse_categorical_accuracy: 0.9993
+Epoch 16/50
+687/687 [==============================] - 13s 19ms/step - loss: 8.0995e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 4.4387e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 17/50
+687/687 [==============================] - 13s 19ms/step - loss: 2.6221e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 2.8788e-04 - val_sparse_categorical_accuracy: 1.0000
+End of training model with activation function =  PReLU
+--------------------------------------------------------------------------------------
+
+              precision    recall  f1-score   support
+
+           0       0.90      0.99      0.94       331
+           1       1.00      0.96      0.98       432
+           2       1.00      0.99      0.99       310
+           3       1.00      0.84      0.92       245
+           4       0.91      0.88      0.89       498
+           5       0.96      1.00      0.98       247
+           6       0.83      0.98      0.90       348
+           7       0.95      0.88      0.91       436
+           8       0.98      0.75      0.85       288
+           9       0.68      0.74      0.71       331
+          10       1.00      1.00      1.00       209
+          11       0.68      0.68      0.68       394
+          12       0.51      0.68      0.58       291
+          13       0.99      0.58      0.73       246
+          14       0.99      0.99      0.99       347
+          15       0.87      0.86      0.87       164
+          16       0.56      0.85      0.67       144
+          17       0.59      0.55      0.57       246
+          18       0.78      0.68      0.73       248
+          19       0.58      0.57      0.57       266
+          20       0.82      0.53      0.64       346
+          21       0.50      0.80      0.61       206
+          22       0.73      0.80      0.76       267
+          23       0.89      0.88      0.88       332
+
+    accuracy                           0.82      7172
+   macro avg       0.82      0.81      0.81      7172
+weighted avg       0.83      0.82      0.82      7172
+
+Execution of CNN training without drop out and with sigmoid
+
+Model: "CNN_without_dropout_and_with_sigmoid"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ first_filters (Conv2D)      (None, 26, 26, 3)         30        
+                                                                 
+ batch_normalization_20 (Bat  (None, 26, 26, 3)        12        
+ chNormalization)                                                
+                                                                 
+ MaxPool1 (MaxPooling2D)     (None, 13, 13, 3)         0         
+                                                                 
+ second_filters (Conv2D)     (None, 11, 11, 3)         84        
+                                                                 
+ batch_normalization_21 (Bat  (None, 11, 11, 3)        12        
+ chNormalization)                                                
+                                                                 
+ MaxPool2 (MaxPooling2D)     (None, 5, 5, 3)           0         
+                                                                 
+ Flatten_of_Convs_Output (Fl  (None, 75)               0         
+ atten)                                                          
+                                                                 
+ Hidden_Layer_1 (Dense)      (None, 1024)              77824     
+                                                                 
+ Hidden_Layer_2 (Dense)      (None, 512)               524800    
+                                                                 
+ Output_Layer (Dense)        (None, 24)                12312     
+                                                                 
+=================================================================
+Total params: 615,074
+Trainable params: 615,062
+Non-trainable params: 12
+_________________________________________________________________
+Epoch 1/50
+687/687 [==============================] - 13s 18ms/step - loss: 1.2276 - sparse_categorical_accuracy: 0.6192 - val_loss: 0.5882 - val_sparse_categorical_accuracy: 0.8082
+Epoch 2/50
+687/687 [==============================] - 12s 18ms/step - loss: 0.2293 - sparse_categorical_accuracy: 0.9397 - val_loss: 0.0971 - val_sparse_categorical_accuracy: 0.9867
+Epoch 3/50
+687/687 [==============================] - 13s 18ms/step - loss: 0.0516 - sparse_categorical_accuracy: 0.9945 - val_loss: 0.0252 - val_sparse_categorical_accuracy: 0.9985
+Epoch 4/50
+687/687 [==============================] - 12s 18ms/step - loss: 0.0161 - sparse_categorical_accuracy: 0.9995 - val_loss: 0.0094 - val_sparse_categorical_accuracy: 1.0000
+Epoch 5/50
+687/687 [==============================] - 12s 18ms/step - loss: 0.0082 - sparse_categorical_accuracy: 0.9993 - val_loss: 0.0042 - val_sparse_categorical_accuracy: 1.0000
+Epoch 6/50
+687/687 [==============================] - 12s 18ms/step - loss: 0.0048 - sparse_categorical_accuracy: 0.9995 - val_loss: 0.0133 - val_sparse_categorical_accuracy: 0.9982
+Epoch 7/50
+687/687 [==============================] - 12s 18ms/step - loss: 0.0180 - sparse_categorical_accuracy: 0.9952 - val_loss: 0.0015 - val_sparse_categorical_accuracy: 1.0000
+Epoch 8/50
+687/687 [==============================] - 13s 19ms/step - loss: 9.6865e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 8.7072e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 9/50
+687/687 [==============================] - 12s 18ms/step - loss: 6.3303e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 5.9486e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 10/50
+687/687 [==============================] - 12s 18ms/step - loss: 4.3341e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 3.9770e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 11/50
+687/687 [==============================] - 12s 18ms/step - loss: 3.0382e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 3.1078e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 12/50
+687/687 [==============================] - 15s 22ms/step - loss: 2.1534e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 2.1454e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 13/50
+687/687 [==============================] - 16s 23ms/step - loss: 1.5932e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 2.4535e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 14/50
+687/687 [==============================] - 16s 23ms/step - loss: 1.1367e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 1.1084e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 15/50
+687/687 [==============================] - 14s 21ms/step - loss: 7.7709e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 8.0018e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 16/50
+687/687 [==============================] - 16s 23ms/step - loss: 5.4823e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 6.5993e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 17/50
+687/687 [==============================] - 15s 21ms/step - loss: 3.9309e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 5.3887e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 18/50
+687/687 [==============================] - 14s 21ms/step - loss: 2.6321e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 3.3582e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 19/50
+687/687 [==============================] - 14s 21ms/step - loss: 1.7944e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 2.6176e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 20/50
+687/687 [==============================] - 14s 21ms/step - loss: 1.2160e-05 - sparse_categorical_accuracy: 1.0000 - val_loss: 2.0572e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 21/50
+687/687 [==============================] - 14s 21ms/step - loss: 8.9035e-06 - sparse_categorical_accuracy: 1.0000 - val_loss: 1.6589e-05 - val_sparse_categorical_accuracy: 1.0000
+Epoch 22/50
+687/687 [==============================] - 15s 22ms/step - loss: 0.0191 - sparse_categorical_accuracy: 0.9946 - val_loss: 0.0010 - val_sparse_categorical_accuracy: 1.0000
+Epoch 23/50
+687/687 [==============================] - 14s 20ms/step - loss: 2.8026e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 2.4219e-04 - val_sparse_categorical_accuracy: 1.0000
+Epoch 24/50
+687/687 [==============================] - 14s 20ms/step - loss: 1.2298e-04 - sparse_categorical_accuracy: 1.0000 - val_loss: 1.4930e-04 - val_sparse_categorical_accuracy: 1.0000
+End of training model with activation function =  sigmoid
+--------------------------------------------------------------------------------------
+
+              precision    recall  f1-score   support
+
+           0       0.83      1.00      0.90       331
+           1       1.00      0.95      0.98       432
+           2       0.89      1.00      0.94       310
+           3       0.89      0.93      0.91       245
+           4       0.86      0.96      0.91       498
+           5       0.82      1.00      0.90       247
+           6       0.92      0.87      0.90       348
+           7       0.92      0.80      0.86       436
+           8       0.96      0.82      0.88       288
+           9       0.80      0.76      0.78       331
+          10       0.87      1.00      0.93       209
+          11       0.73      0.86      0.79       394
+          12       0.78      0.54      0.64       291
+          13       0.96      0.65      0.77       246
+          14       0.87      0.90      0.89       347
+          15       0.73      0.87      0.79       164
+          16       0.55      0.85      0.67       144
+          17       0.71      0.63      0.67       246
+          18       0.75      0.65      0.70       248
+          19       0.70      0.69      0.69       266
+          20       0.94      0.86      0.89       346
+          21       0.79      0.81      0.80       206
+          22       0.91      0.80      0.85       267
+          23       0.90      0.88      0.89       332
+
+    accuracy                           0.84      7172
+   macro avg       0.84      0.84      0.83      7172
+weighted avg       0.85      0.84      0.84      7172
+
+Train time(secs) with dropout relu 	101.50942802429199
+Train time(secs) with dropout PReLU 	230.4533770084381
+Train time(secs) with dropout sigmoid 	329.69622707366943
